@@ -64,10 +64,11 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Installing dependencies..." --weight=44
+ynh_script_progression --message="Skipping dependencies installation..." --weight=44
+#ynh_script_progression --message="Installing dependencies..." --weight=44
 
-ynh_install_app_dependencies $pkg_dependencies
-ynh_install_extra_app_dependencies --repo="deb https://packages.grafana.com/oss/deb stable main" --package="grafana" --key="https://packages.grafana.com/gpg.key"
+#ynh_install_app_dependencies $pkg_dependencies
+#ynh_install_extra_app_dependencies --repo="deb https://packages.grafana.com/oss/deb stable main" --package="grafana" --key="https://packages.grafana.com/gpg.key"
 
 #=================================================
 # CREATE A MYSQL DATABASE
